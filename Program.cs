@@ -23,7 +23,7 @@ namespace dzshka
             }
             else
             {
-                Console.WriteLine("Строка должна быть только intовой...");
+                Console.WriteLine("В строке должны быть int-числа!");
             }
         }
     }
