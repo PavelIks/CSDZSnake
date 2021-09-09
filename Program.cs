@@ -27,6 +27,7 @@ namespace dzshka
             }
         }
     }
+
     class Program
     {
         static void Main(string[] args)
@@ -40,29 +41,3 @@ namespace dzshka
         }
     }
 }
-
-
-/*class Program
-{
-    static void Main(string[] args)
-    {
-        Console.Write("Введите N (кол. раз): ");
-        string numb_N = Console.ReadLine();
-        Console.Write("Введите M (длину): ");
-        string numb_M = Console.ReadLine();
-        if (numb_N.All(char.IsDigit) && numb_M.All(char.IsDigit))
-        {
-            int x = Int32.Parse(numb_N);
-            int y = Int32.Parse(numb_M);
-
-            for (int i = 1; i <= (x * y); i++)
-            {
-                Console.WriteLine("█\n");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Строка должна быть только intовой...");
-        }
-    }
-}*/
