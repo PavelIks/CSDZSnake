@@ -18,7 +18,7 @@ namespace dzshka
 
                 for (int i = 1; i <= (x * y); i++)
                 {
-                    Console.WriteLine("█\n");
+                    Console.Write("▬");
                 }
             }
             else
@@ -38,6 +38,7 @@ namespace dzshka
             Console.Write("Введите M (длину): ");
             snake.numb_M = Console.ReadLine();
             snake.DisplayInfo();
+            Console.ReadKey();
         }
     }
 }
