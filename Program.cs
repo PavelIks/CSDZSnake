@@ -13,10 +13,10 @@ namespace dzshka
             Console.WriteLine($"N:{numb_N} | M:{numb_M}\n");
             if (numb_N.All(char.IsDigit) && numb_M.All(char.IsDigit))
             {
-                int x = Int32.Parse(numb_N);
-                int y = Int32.Parse(numb_M);
+                int a = Int32.Parse(numb_N);
+                int b = Int32.Parse(numb_M);
 
-                for (int i = 1; i <= (x * y); i++)
+                for (int i = 1; i <= (a * b); i++)
                 {
                     Console.Write("▬");
                 }
