@@ -33,11 +33,11 @@ namespace dzshka
         static void Main(string[] args)
         {
             Snake snake;
-            snake.numb_N = "1";
-            snake.numb_M = "5";
+            Console.Write("Введите N (кол. раз): ");
+            snake.numb_N = Console.ReadLine();
+            Console.Write("Введите M (длину): ");
+            snake.numb_M = Console.ReadLine();
             snake.DisplayInfo();
-
-            Console.ReadKey();
         }
     }
 }
