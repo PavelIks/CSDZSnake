@@ -3,14 +3,14 @@ using System.Linq;
 
 namespace dzshka
 {
-    class Program
+    struct Snake
     {
-        static void Main(string[] args)
+        public string numb_N;
+        public string numb_M;
+
+        public void DisplayInfo()
         {
-            Console.Write("Введите N (кол. раз): ");
-            string numb_N = Console.ReadLine();
-            Console.Write("Введите M (длину): ");
-            string numb_M = Console.ReadLine();
+            Console.WriteLine($"N:{numb_N} | M:{numb_M}\n");
             if (numb_N.All(char.IsDigit) && numb_M.All(char.IsDigit))
             {
                 int x = Int32.Parse(numb_N);
@@ -23,18 +23,46 @@ namespace dzshka
             }
             else
             {
-                Console.WriteLine("Стока должна быть только intовой...");
+                Console.WriteLine("Строка должна быть только intовой...");
             }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Snake snake;
+            snake.numb_N = "1";
+            snake.numb_M = "5";
+            snake.DisplayInfo();
 
-            // Без проверки на число
-            /*Console.Write("Введите N (кол. раз): ");
-            int numb_N = Int32.Parse(Console.ReadLine());
-            Console.Write("Введите M (длину): ");
-            int numb_M = Int32.Parse(Console.ReadLine());
-            for (int i = 1; i <= (numb_M * numb_N); i++)
-            {
-                Console.WriteLine("█\n");
-            }*/
+            Console.ReadKey();
         }
     }
 }
+
+
+/*class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Введите N (кол. раз): ");
+        string numb_N = Console.ReadLine();
+        Console.Write("Введите M (длину): ");
+        string numb_M = Console.ReadLine();
+        if (numb_N.All(char.IsDigit) && numb_M.All(char.IsDigit))
+        {
+            int x = Int32.Parse(numb_N);
+            int y = Int32.Parse(numb_M);
+
+            for (int i = 1; i <= (x * y); i++)
+            {
+                Console.WriteLine("█\n");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Строка должна быть только intовой...");
+        }
+    }
+}*/
